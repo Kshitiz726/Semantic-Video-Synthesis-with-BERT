@@ -1,4 +1,4 @@
-""" FFmpeg extraction logic """
+""" Preprocessing Step of the Project """
 import subprocess
 import os
 import sys
