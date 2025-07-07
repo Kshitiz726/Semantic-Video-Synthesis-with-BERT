@@ -55,3 +55,13 @@ python transnet_scene_extractor.py ../input_video/input.mp4
 
 ![Scene Prediction Spikes](yellow.png)
 The audio analysis modulde built by Neha will be Integrated to calculate the MFCC score of  respective scene changed audio under extracted/videoname/Audio , and time stamp , scores, transcribed text and their respective MFCC scores,  will be recorded in preprocessing/extracted/scene_summary.csv & scene_summary.json for analysis.......
+
+
+
+Audio analysis 
+
+First go to run_whisper.py where a raw audio is given ... The path to audio is set there, you can change as per the audio you want to test . Upon running  run_whisper.py  you get the audio is divided into nimber of segments with their timestamps by whisper and by the use of librosa in the same  file u can see te MFcc score ... All these segments  are stored in the Folder segments so that we can do Emotion analysis if each segments... 
+
+now for the emotion analysis Firt there is dataset in  Audio_Speech_Actors_01-24 and then through organize.py we sort these audio into various categories like happy, sad, angry, calm ......
+and the sorted audios  categorically is stored in emotiondataset . later we are trying to train and make a  model 
+ 
