@@ -53,5 +53,5 @@ than run this
 python transnet_scene_extractor.py ../input_video/input.mp4
 ```
 
-![Scene Prediction Spikes](integration.png)
+![Scene Prediction Spikes](overview.png)
 The audio analysis modulde built by Neha will be Integrated to calculate the MFCC score of  respective scene changed audio under extracted/videoname/Audio , and time stamp , scores, transcribed text and their respective MFCC scores,  will be recorded in preprocessing/extracted/scene_summary.csv & scene_summary.json for analysis.......
