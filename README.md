@@ -25,6 +25,9 @@ You can use the functions built to do the audio analysis....
 
 [2025-July- 07] : Transnet Scene Analysis 
 
+![Scene Prediction Spikes](transnetv2.png)
+
+
 -> Same directory as above
 -> The video segment where there is scene change, threshold = 0.6, has been clipped out
 -> Scene Analysis requires manually setting up TransnetV2, (you cant directly install it via pip, if you try) you can try out cloning
