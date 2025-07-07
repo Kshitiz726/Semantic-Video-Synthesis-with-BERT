@@ -1,14 +1,13 @@
 import os
 import shutil
 
-
 ravdess_dir = r"C:\Users\Asus\Desktop\BERT\Semantic-Video-Synthesis-with-BERT\Audio_Speech_Actors_01-24"
 
 output_dir = r"C:\Users\Asus\Desktop\BERT\Semantic-Video-Synthesis-with-BERT\emotiondataset"
 
-
 emotion_map = {
     "01": "neutral",
+    "02": "calm",  
     "03": "happy",
     "04": "sad",
     "05": "angry",

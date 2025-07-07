@@ -1,5 +1,3 @@
-
-
 import whisper
 import librosa
 import soundfile as sf
