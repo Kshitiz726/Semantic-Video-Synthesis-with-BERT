@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+inference/__init__.py
+inference/transnetv2.py
+inference/transnetv2-weights/saved_model.pb
+inference/transnetv2-weights/variables/variables.data-00000-of-00001
+inference/transnetv2-weights/variables/variables.index
+transnetv2.egg-info/PKG-INFO
+transnetv2.egg-info/SOURCES.txt
+transnetv2.egg-info/dependency_links.txt
+transnetv2.egg-info/entry_points.txt
+transnetv2.egg-info/not-zip-safe
+transnetv2.egg-info/top_level.txt

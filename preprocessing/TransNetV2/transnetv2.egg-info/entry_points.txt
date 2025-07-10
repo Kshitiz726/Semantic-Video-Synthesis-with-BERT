@@ -1,0 +1,2 @@
+[console_scripts]
+transnetv2_predict = transnetv2.transnetv2:main
