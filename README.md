@@ -3,25 +3,24 @@
 > **🏆 Awarded as one of the Best Projects on Campus**  
 > **🎤 Presented at the Thapathali Graduate Conference**  
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="40%">
-        <b>🎤 Conference Presenter</b><br><br>
-        <img src="presenter_card.jpg" alt="Presenter Card" width="100%" />
-      </td>
-      <td align="center" width="60%">
-        <b>🏆 Certificate of Appreciation</b><br><br>
-        <img src="certificate.jpg" alt="Best Project Certificate" width="100%" />
-      </td>
-    </tr>
-  </table>
-</div>
-
 ---
+
 
 ## 📖 Overview
 This project implements a pipeline for semantic video synthesis, utilizing BERT for text embeddings, TransNetV2 for scene analysis, Whisper for ASR, and CLIP for importance scoring. The system processes raw video, extracts meaningful segments, analyzes emotions via audio, and synthesizes a concise, meaningful output video.
+
+---
+
+## 🏆 Awards & Recognition
+
+We are proud to share that this project was recognized for its innovation and execution:
+- **Best Project on Campus:** Awarded for outstanding technical implementation.
+- **Conference Presentation:** Presented at the prestigious Thapathali Graduate Conference.
+
+<p align="center">
+  <img src="presenter_card.jpg" alt="Presenter Card" height="350" style="margin-right: 15px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+  <img src="certificate.jpg" alt="Best Project Certificate" height="350" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+</p>
 
 ---
 
