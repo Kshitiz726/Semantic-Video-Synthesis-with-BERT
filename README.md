@@ -4,12 +4,18 @@
 > **🎤 Presented at the Thapathali Graduate Conference**  
 
 <div align="center">
-  <img src="thapathali_conference.jpg" alt="Thapathali Graduate Conference" width="45%" />
-  <img src="presenter_card.jpg" alt="Presenter Card" width="45%" />
-  <br>
-  <img src="certificate.jpg" alt="Best Project Certificate" width="80%" />
-  <br>
-  <em>(Please place your image files: <code>thapathali_conference.jpg</code>, <code>presenter_card.jpg</code>, and <code>certificate.jpg</code> in the root directory to display them here)</em>
+  <table>
+    <tr>
+      <td align="center" width="40%">
+        <b>🎤 Conference Presenter</b><br><br>
+        <img src="presenter_card.jpg" alt="Presenter Card" width="100%" />
+      </td>
+      <td align="center" width="60%">
+        <b>🏆 Certificate of Appreciation</b><br><br>
+        <img src="certificate.jpg" alt="Best Project Certificate" width="100%" />
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---
