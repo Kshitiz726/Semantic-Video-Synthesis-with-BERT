@@ -1,0 +1,16 @@
+numpy
+matplotlib
+opencv-python
+tensorflow
+ffmpeg-python
+openai-whisper
+eyed3
+pyAudioAnalysis
+imblearn
+pydub
+plotly
+fastapi
+uvicorn
+python-multipart
+
+

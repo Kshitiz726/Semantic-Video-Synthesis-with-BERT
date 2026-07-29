@@ -1,0 +1,122 @@
+[
+  {
+    "scene_id": 1,
+    "shot_start": 1,
+    "shot_end": 11
+  },
+  {
+    "scene_id": 2,
+    "shot_start": 12,
+    "shot_end": 29
+  },
+  {
+    "scene_id": 3,
+    "shot_start": 30,
+    "shot_end": 34
+  },
+  {
+    "scene_id": 4,
+    "shot_start": 35,
+    "shot_end": 42
+  },
+  {
+    "scene_id": 5,
+    "shot_start": 43,
+    "shot_end": 46
+  },
+  {
+    "scene_id": 6,
+    "shot_start": 47,
+    "shot_end": 55
+  },
+  {
+    "scene_id": 7,
+    "shot_start": 56,
+    "shot_end": 72
+  },
+  {
+    "scene_id": 8,
+    "shot_start": 73,
+    "shot_end": 83
+  },
+  {
+    "scene_id": 9,
+    "shot_start": 84,
+    "shot_end": 89
+  },
+  {
+    "scene_id": 10,
+    "shot_start": 90,
+    "shot_end": 95
+  },
+  {
+    "scene_id": 11,
+    "shot_start": 96,
+    "shot_end": 105
+  },
+  {
+    "scene_id": 12,
+    "shot_start": 106,
+    "shot_end": 119
+  },
+  {
+    "scene_id": 13,
+    "shot_start": 120,
+    "shot_end": 126
+  },
+  {
+    "scene_id": 14,
+    "shot_start": 127,
+    "shot_end": 137
+  },
+  {
+    "scene_id": 15,
+    "shot_start": 138,
+    "shot_end": 145
+  },
+  {
+    "scene_id": 16,
+    "shot_start": 146,
+    "shot_end": 149
+  },
+  {
+    "scene_id": 17,
+    "shot_start": 150,
+    "shot_end": 171
+  },
+  {
+    "scene_id": 18,
+    "shot_start": 172,
+    "shot_end": 201
+  },
+  {
+    "scene_id": 19,
+    "shot_start": 202,
+    "shot_end": 208
+  },
+  {
+    "scene_id": 20,
+    "shot_start": 209,
+    "shot_end": 219
+  },
+  {
+    "scene_id": 21,
+    "shot_start": 220,
+    "shot_end": 235
+  },
+  {
+    "scene_id": 22,
+    "shot_start": 236,
+    "shot_end": 242
+  },
+  {
+    "scene_id": 23,
+    "shot_start": 243,
+    "shot_end": 250
+  },
+  {
+    "scene_id": 24,
+    "shot_start": 251,
+    "shot_end": 263
+  }
+]

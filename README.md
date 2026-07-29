@@ -1,4 +1,4 @@
-# 🎬 Semantic Video Synthesis with BERT
+# 🎬 Multimodal AI System for Clip Extraction from Long Videos
 
 > **🏆 Awarded as one of the Best Projects on Campus**  
 > **🎤 Presented at the Thapathali Graduate Conference**  
@@ -7,7 +7,7 @@
 
 
 ## 📖 Overview
-This project implements a pipeline for semantic video synthesis, utilizing BERT for text embeddings, TransNetV2 for scene analysis, Whisper for ASR, and CLIP for importance scoring. The system processes raw video, extracts meaningful segments, analyzes emotions via audio, and synthesizes a concise, meaningful output video.
+This project implements a multimodal pipeline that extracts the most meaningful clips from long-form video, utilizing BERT for text embeddings, TransNetV2 for scene analysis, Whisper for ASR, and CLIP for importance scoring. The system processes raw video, segments it into scenes, scores them across visual, textual, and audio modalities, and synthesizes a concise, meaningful output video.
 
 ---
 

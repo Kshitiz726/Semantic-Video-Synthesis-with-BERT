@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Multimodal AI System for Clip Extraction from Long Videos</title>
+  <link rel="stylesheet" href="style.css?v=2.1">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- LOADING OVERLAY -->
+  <div class="processing-overlay" id="loader">
+    <div class="spinner"></div>
+    <div style="font-size: 1.1rem; letter-spacing: 1px;">PROCESSING VIDEO SCENES...</div>
+    <div style="font-size: 0.9rem; color: #94a3b8; margin-top: 5px;">This may take a few minutes.</div>
+  </div>
+
+  <header>
+    <div class="brand">Multimodal AI System for Clip Extraction from Long Videos</div>
+    <div style="font-size:0.9rem; color:var(--text-secondary);"></div>
+  </header>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="control-section">
+        <h3>1. Import Source</h3>
+        <label class="upload-zone">
+          <input type="file" id="fileInput" hidden accept="video/mp4">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">☁️</div>
+          <div id="fileName">Click to Upload MP4</div>
+        </label>
+        <button class="cta-btn" id="runBtn">Generate Highlights</button>
+      </div>
+
+      <div class="control-section">
+        <h3>2. Fine-Tune Weights</h3>
+        <div class="slider-container">
+
+          <div class="slider-row">
+            <div class="slider-label"><span>Visual Impact</span> <span id="lbl-vis">50%</span></div>
+            <input type="range" id="sl-vis" value="50" max="100">
+          </div>
+
+          <div class="slider-row">
+            <div class="slider-label"><span>Audio Clarity</span> <span id="lbl-aud">30%</span></div>
+            <input type="range" id="sl-aud" value="30" max="100">
+          </div>
+
+          <div class="slider-row">
+            <div class="slider-label"><span>Text Relevance</span> <span id="lbl-txt">20%</span></div>
+            <input type="range" id="sl-txt" value="20" max="100">
+          </div>
+
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN DISPLAY -->
+    <main class="main-stage">
+
+      <div id="welcomeState" style="text-align:center; padding-top:100px; color:var(--text-secondary);">
+        <h1>Ready to Create</h1>
+        <p>Upload a video to start the semantic analysis engine.</p>
+      </div>
+
+      <div id="resultsArea" style="display:none;">
+
+        <!-- VISUALIZATION -->
+        <h2 style="margin-bottom:1.5rem;">Semantics Timeline (Interactive)</h2>
+        <div class="viz-banner"
+          style="background:var(--bg-card); padding:1rem; border-radius:16px; border:1px solid var(--border); box-shadow:0 10px 30px rgba(0,0,0,0.3);">
+          <canvas id="vizChart" height="100"></canvas>
+        </div>
+
+        <!-- CLIPS GRID -->
+        <h2 style="margin-bottom:1.5rem; margin-top: 2rem;">Generated Highlights</h2>
+        <div class="grid-container" id="cardsGrid">
+          <!-- Cards go here -->
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script>
+    // STATE
+    let sessionData = [];
+    let currentSessionId = "";
+    let chartInstance = null;
+
+    // ELEMENTS
+    const fileInput = document.getElementById('fileInput');
+    const fileName = document.getElementById('fileName');
+    const runBtn = document.getElementById('runBtn');
+    const loader = document.getElementById('loader');
+    const welcomeState = document.getElementById('welcomeState');
+    const resultsArea = document.getElementById('resultsArea');
+    const grid = document.getElementById('cardsGrid');
+    const vizCanvas = document.getElementById('vizChart');
+
+    // SLIDERS
+    const sV = document.getElementById('sl-vis');
+    const sA = document.getElementById('sl-aud');
+    const sT = document.getElementById('sl-txt');
+    const lV = document.getElementById('lbl-vis');
+    const lA = document.getElementById('lbl-aud');
+    const lT = document.getElementById('lbl-txt');
+
+    // HANDLERS
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files.length) {
+        fileName.innerText = e.target.files[0].name;
+        fileName.style.color = "var(--text-primary)";
+      }
+    });
+
+    runBtn.addEventListener('click', async () => {
+      if (!fileInput.files.length) return alert("Select a file first.");
+
+      // UI State
+      loader.style.display = 'flex';
+      runBtn.disabled = true;
+
+      const fd = new FormData();
+      fd.append('file', fileInput.files[0]);
+
+      try {
+        const res = await fetch('/process', { method: 'POST', body: fd });
+        if (!res.ok) throw new Error("Server Failed");
+
+        const startData = await res.json();
+        currentSessionId = startData.session_id;
+
+        // Start Polling
+        startPolling(currentSessionId);
+
+      } catch (e) {
+        loader.style.display = 'none';
+        runBtn.disabled = false;
+        alert("Error: " + e.message);
+      }
+    });
+
+    let pollInterval = null;
+
+    function startPolling(sid) {
+      const statusText = document.querySelector('#loader div:nth-child(2)');
+      const subText = document.querySelector('#loader div:nth-child(3)');
+
+      pollInterval = setInterval(async () => {
+        try {
+          // 1. Check Status
+          const sRes = await fetch(`/status/${sid}`);
+          const sData = await sRes.json();
+
+          if (sData.status === 'done') {
+            clearInterval(pollInterval);
+            finishProcessing(sData.result);
+          } else if (sData.status === 'error') {
+            clearInterval(pollInterval);
+            alert("Processing Failed: " + sData.message);
+            loader.style.display = 'none';
+            runBtn.disabled = false;
+          }
+
+          // 2. Update Friendly Logs
+          const lRes = await fetch(`/logs/${sid}`);
+          const lData = await lRes.json();
+          if (lData.logs && lData.logs.length > 0) {
+            const lastLog = lData.logs[lData.logs.length - 1];
+            updateFriendlyStatus(lastLog, statusText, subText);
+          }
+
+        } catch (e) {
+          console.error(e);
+        }
+      }, 1000);
+    }
+
+    function updateFriendlyStatus(logLine, mainEl, subEl) {
+      // Map technical logs to friendly messages
+      if (logLine.includes("TransNetV2")) {
+        mainEl.innerText = "ANALYZING VISUAL SCENES";
+        subEl.innerText = "..";
+      } else if (logLine.includes("Whisper")) {
+        mainEl.innerText = "TRANSCRIBING SPEECH";
+        subEl.innerText = "Listening to every word...";
+      } else if (logLine.includes("shot text embeddings")) {
+        mainEl.innerText = "UNDERSTANDING CONTEXT";
+        subEl.innerText = "Connecting visuals with dialogue...";
+      } else if (logLine.includes("SceneSeg")) {
+        mainEl.innerText = "SEGMENTING TOPICS";
+        subEl.innerText = "Finding coherent story blocks...";
+      } else if (logLine.includes("Extracting scene clips")) {
+        mainEl.innerText = "CUTTING HIGHLIGHTS";
+        subEl.innerText = "Preparing individual clips...";
+      } else if (logLine.includes("importance scores")) {
+        mainEl.innerText = "SCORING MOMENTS";
+        subEl.innerText = "Ranking the best parts...";
+      }
+    }
+
+    function finishProcessing(data) {
+      sessionData = data.ranked_clips || [];
+
+      // SUCCESS STATE
+      loader.style.display = 'none';
+      welcomeState.style.display = 'none';
+      resultsArea.style.display = 'block';
+
+      // Initial Render
+      updateWeights();
+    }
+    // CHART LOGIC
+    function initOrUpdateChart(sortedData, visualW, audioW, textW) {
+      const labels = sortedData.map(c => c.clip); // e.g. scene_001
+      const visualScores = sortedData.map(c => c.visual * 100);
+      const audioScores = sortedData.map(c => c.audio * 100);
+      const textScores = sortedData.map(c => c.text * 100);
+
+      // Calculate dynamic importance based on CURRENT weights
+      const finalScores = sortedData.map(c =>
+        (c.visual * visualW + c.audio * audioW + c.text * textW) * 100
+      );
+
+      const ctx = vizCanvas.getContext('2d');
+
+      if (chartInstance) {
+        // Update existing chart
+        chartInstance.data.datasets[0].data = finalScores; // Update Main Line
+        chartInstance.update('none'); // Efficient update
+      } else {
+        // Create new chart
+        chartInstance = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: 'Final Importance (Dynamic)',
+                data: finalScores,
+                borderColor: '#3b82f6', // Accent Blue
+                backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                borderWidth: 3,
+                fill: true,
+                tension: 0.3,
+                pointRadius: 4,
+                pointHoverRadius: 6
+              },
+              {
+                label: 'Visual',
+                data: visualScores,
+                borderColor: '#fbbf24', // Amber
+                borderDash: [5, 5],
+                borderWidth: 1,
+                pointRadius: 0,
+                showLine: true
+              },
+              {
+                label: 'Audio',
+                data: audioScores,
+                borderColor: '#10b981', // Emerald
+                borderDash: [5, 5],
+                borderWidth: 1,
+                pointRadius: 0,
+                showLine: true
+              },
+              {
+                label: 'Text',
+                data: textScores,
+                borderColor: '#f43f5e', // Rose
+                borderDash: [5, 5],
+                borderWidth: 1,
+                pointRadius: 0,
+                showLine: true
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            interaction: {
+              mode: 'index',
+              intersect: false,
+            },
+            plugins: {
+              legend: {
+                labels: { color: '#94a3b8' }
+              },
+              tooltip: {
+                backgroundColor: 'rgba(30, 41, 59, 0.9)',
+                titleColor: '#f8fafc',
+                bodyColor: '#cbd5e1',
+                borderColor: '#475569',
+                borderWidth: 1
+              }
+            },
+            scales: {
+              x: {
+                ticks: { color: '#64748b', maxRotation: 45, minRotation: 45 },
+                grid: { color: '#334155' }
+              },
+              y: {
+                beginAtZero: true,
+                max: 100,
+                ticks: { color: '#64748b' },
+                grid: { color: '#334155' }
+              }
+            }
+          }
+        });
+      }
+    }
+
+    // WEIGHT LOGIC
+    function updateWeights() {
+      const v = Number(sV.value);
+      const a = Number(sA.value);
+      const t = Number(sT.value);
+      const total = v + a + t || 1;
+
+      const wV = v / total;
+      const wA = a / total;
+      const wT = t / total;
+
+      lV.innerText = Math.round(wV * 100) + "%";
+      lA.innerText = Math.round(wA * 100) + "%";
+      lT.innerText = Math.round(wT * 100) + "%";
+
+      // 1. Sort temporally for Chart (Scene Index Order)
+      // Assuming naming convention "scene_001", "scene_002" allows alphabetical sort to work generally
+      // But strictly we should parse the number.
+      const temporalData = [...sessionData].sort((a, b) => {
+        const idxA = parseInt(a.clip.match(/\d+/) || 0);
+        const idxB = parseInt(b.clip.match(/\d+/) || 0);
+        return idxA - idxB;
+      });
+
+      // Calculate chart
+      initOrUpdateChart(temporalData, wV, wA, wT);
+
+      // 2. Sort by Score for Grid
+      const reScored = sessionData.map(c => ({
+        ...c,
+        score: (c.visual * wV + c.audio * wA + c.text * wT) * 100
+      })).sort((a, b) => b.score - a.score);
+
+      renderCards(reScored);
+    }
+
+    [sV, sA, sT].forEach(el => el.addEventListener('input', updateWeights));
+
+    // CHECK PROTOCOL
+    if (window.location.protocol === 'file:') {
+      alert("⚠️ You are opening this file directly! Please use the server URL: http://127.0.0.1:8000\n\nThe app will not work correctly in file mode.");
+    }
+
+    // RENDER
+    function renderCards(clips) {
+      grid.innerHTML = "";
+
+      clips.forEach((clip, i) => {
+        const name = clip.clip.endsWith('.mp4') ? clip.clip : clip.clip + '.mp4';
+        // Use precise relative path
+        const url = `sessions/${currentSessionId}/importance_scoring/clips/${name}`;
+
+        const div = document.createElement('div');
+        div.className = 'video-card';
+        div.innerHTML = `
+      <div class="video-wrapper">
+         <video controls preload="metadata" loading="lazy">
+           <source src="${url}" type="video/mp4">
+           Your browser does not support video.
+         </video>
+      </div>
+      <div class="card-body">
+        <div class="stats-row">
+          <div class="importance-badge">Avg Score: ${clip.score.toFixed(1)}</div>
+          <div style="font-size:0.8rem; color:#666;">Rank #${i + 1}</div>
+        </div>
+        <!-- Requested Format: Visual 0.81 | Audio 0.63 | Text 0.59 -->
+        <div style="font-family:monospace; font-size:0.85rem; color:var(--accent); margin-bottom:0.8rem;">
+          Visual ${(clip.visual).toFixed(2)} | Audio ${(clip.audio).toFixed(2)} | Text ${(clip.text).toFixed(2)}
+        </div>
+        <div class="transcript" title="${clip.transcript}">${clip.transcript || 'No speech detected...'}</div>
+      </div>
+    `;
+        grid.appendChild(div);
+      });
+    }
+
+  </script>
+</body>
+
+</html>

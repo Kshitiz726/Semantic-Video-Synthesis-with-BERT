@@ -1,0 +1,3 @@
+[submodule "scene_segmentation/SceneSeg"]
+	path = scene_segmentation/SceneSeg
+	url = https://github.com/AnyiRao/SceneSeg

@@ -1,0 +1,1 @@
+ There are traction motors, but sensors like an IMU, IR sensors, there is actually a lot of temperature and heat sensors, you know, a myriad of sensors actually all feed data and that has to be processed and through that process, you know, a command to the gyros to tilt
