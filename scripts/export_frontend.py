@@ -23,14 +23,15 @@ REPO = "https://github.com/Kshitiz726/Semantic-Video-Synthesis-with-BERT"
 COLAB = "https://colab.research.google.com/github/Kshitiz726/Semantic-Video-Synthesis-with-BERT/blob/main/notebooks/ClipRanker_Colab.ipynb"
 
 
-def compress(src, dst):
-    """Small H.264 copy for the web (timestamps are unchanged)."""
+def compress(src, dst, start=None, end=None):
+    """Small H.264 copy for the web. With start/end, only that span is cut (frame-accurate re-encode)."""
     import sys
 
     sys.path.insert(0, sys_path)
     from svs.config import ffmpeg_bin
 
-    subprocess.run([ffmpeg_bin(), "-v", "error", "-y", "-i", str(src), "-vf", "scale=-2:'min(360,ih)'",
+    span = [] if start is None else ["-ss", f"{start:.3f}", "-t", f"{end - start:.3f}"]
+    subprocess.run([ffmpeg_bin(), "-v", "error", "-y", *span, "-i", str(src), "-vf", "scale=-2:'min(360,ih)'",
                     "-c:v", "libx264", "-preset", "slow", "-crf", "30", "-pix_fmt", "yuv420p",
                     "-c:a", "aac", "-b:a", "64k", "-ac", "1", "-movflags", "+faststart", str(dst)], check=True)
 
@@ -60,11 +61,14 @@ def main():
             sid = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
             dst = out / "samples" / sid
             (dst / "thumbs").mkdir(parents=True)
+            (dst / "clips").mkdir()
             result = json.loads((run_dir / "result.json").read_text("utf-8"))
             (dst / "result.json").write_text(json.dumps(result, ensure_ascii=False, separators=(",", ":")), "utf-8")
             for thumb in (run_dir / "thumbs").glob("*.jpg"):
                 shutil.copy2(thumb, dst / "thumbs" / thumb.name)
             compress(run_dir / "video.mp4", dst / "video.mp4")
+            for sc in result["scenes"]:
+                compress(run_dir / "video.mp4", dst / "clips" / f"scene_{sc['id']:03d}.mp4", sc["start"], sc["end"])
             samples.append({"id": sid, "name": title, "base": f"samples/{sid}/",
                             "duration": result["video"]["duration"], "n_scenes": len(result["scenes"])})
             print(f"sample {sid}: {(dst / 'video.mp4').stat().st_size / 1e6:.1f} MB video")

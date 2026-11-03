@@ -215,7 +215,7 @@ function renderCards() {
   const labels = { visual: "visual", audio: "audio", text: "dialogue" };
   $("cards").innerHTML = scenes.map((s) => {
     const n = String(s.id).padStart(3, "0");
-    const clip = STATIC ? `${media(id, "video.mp4")}#t=${s.start.toFixed(2)},${s.end.toFixed(2)}` : media(id, `clips/scene_${n}.mp4`);
+    const clip = media(id, `clips/scene_${n}.mp4`);
     const bars = Object.keys(state.weights).map((m) => `<span>${labels[m]}</span><div class="bar"><div style="width:${(s.modalities[m] ?? 0) * 100}%"></div></div><span>${(s.modalities[m] ?? 0).toFixed(2)}</span>`).join("");
     return `<div class="card ${s._rank <= 3 ? "top" : ""} ${s._sel ? "sel" : ""}">
       <span class="rank-badge">#${s._rank}</span>
@@ -225,7 +225,7 @@ function renderCards() {
         <div class="muted" style="font-size:.8rem">${s.duration.toFixed(1)} s, ${s.shots.length} shot${s.shots.length > 1 ? "s" : ""}</div>
         <div class="bars"><span><b>score</b></span><div class="bar total"><div style="width:${s._score * 100}%"></div></div><span><b>${s._score.toFixed(2)}</b></span>${bars}</div>
         <div class="transcript">${s.transcript ? "\u201c" + esc(s.transcript) + "\u201d" : "<i>no speech</i>"}</div>
-        <div class="card-actions"><button class="ghost" data-seek="${s.start}">Show in video</button>${STATIC ? "" : `<a href="${clip}" download="rank${String(s._rank).padStart(2, "0")}_scene${n}.mp4">Download clip</a>`}</div>
+        <div class="card-actions"><button class="ghost" data-seek="${s.start}">Show in video</button><a href="${clip}" download="rank${String(s._rank).padStart(2, "0")}_scene${n}.mp4">Download clip</a></div>
       </div></div>`;
   }).join("");
   for (const el of $("cards").querySelectorAll("[data-seek]")) el.onclick = () => seek(+el.dataset.seek, true);
