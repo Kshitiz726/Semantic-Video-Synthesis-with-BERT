@@ -1,1 +1,0 @@
- in our development is having the vehicle actually be more aware of its surroundings. So it's kind of like putting AI but also having good sensory perception of the road of any kind of external influences or disturbances and having that all get computed and processed to allow for stability.

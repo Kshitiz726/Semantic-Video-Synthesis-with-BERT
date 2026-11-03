@@ -1,62 +1,29 @@
-# ---- Python ----
+# Python
 __pycache__/
 *.py[cod]
-*.so
 *.egg-info/
-.eggs/
-build/
-dist/
-.pytest_cache/
+.venv/
+venv/
 .ipynb_checkpoints/
 
-# ---- Virtual environments ----
-venv/
-.venv/
-env/
-ENV/
-
-# ---- Editor / OS ----
+# Editor / OS
 .vscode/
 .idea/
-*.swp
-*.swo
 .DS_Store
 Thumbs.db
 
-# ---- Media (too large for git; regenerate or download) ----
+# Data, runs and large weights (see README for how to obtain them)
+data/
+runs/
+weights/*
+!weights/importance_transformer.pt
+!weights/README.md
+
+# Media
 *.mp4
 *.mkv
 *.avi
 *.mov
 *.webm
-*.mp3
 *.wav
-*.flac
-*.npy
-*.npz
-
-# ---- Archives ----
-*.tgz
-*.tar.gz
-*.zip
-*.7z
-
-# ---- Datasets (download separately, see README) ----
-importance_scoring/ydata-tvsum50-v1_1/
-importance_scoring/tvsum50_ver_1_1.tgz
-\[NOT USED\] audio_analysis/
-
-# ---- Model weights / checkpoints ----
-*.pt
-*.pth
-*.ckpt
-*.h5
-*.pb
-*.onnx
-
-# ---- Pipeline runtime artifacts ----
-sessions/
-preprocessing/input_video/
-preprocessing/TransNetV2/transnet_output/
-preprocessing/TransNetV2/lgss_input/
-debug/
+*.mp3

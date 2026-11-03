@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClipRanker</title>
+  <meta name="description" content="Upload a video. ClipRanker finds its scenes, extracts each one as a clip and ranks the clips by importance.">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">C</div>
+      <div>
+        <div class="brand-name">ClipRanker</div>
+        <div class="brand-sub">Scene clips ranked by importance</div>
+      </div>
+    </div>
+
+    <label class="upload" id="upload">
+      <input type="file" id="fileInput" accept="video/*" hidden>
+      <span class="upload-title">Upload a video</span>
+      <span class="upload-hint" id="uploadHint">Drop a file or click to browse</span>
+    </label>
+
+    <div class="server" id="server"><i class="dot"></i><span>Connecting to server</span></div>
+
+    <nav>
+      <button class="nav-item" id="navBenchmark">Model accuracy (TVSum)</button>
+    </nav>
+
+    <div class="runs-head" id="runsHead">Your videos</div>
+    <ul class="runs" id="runs"></ul>
+  </aside>
+
+  <main id="main">
+    <section class="empty" id="emptyView">
+      <h1>Every scene, extracted and ranked.</h1>
+      <p>Upload a video and ClipRanker splits it into scenes, cuts each scene out as its own clip,
+        and ranks the clips from most to least important. It also builds a short highlight reel.</p>
+      <ol class="steps">
+        <li><b>Shots</b>TransNetV2 finds every cut at the video's real frame rate</li>
+        <li><b>Speech</b>Whisper transcribes what is said</li>
+        <li><b>Scenes</b>shots are grouped by what they show (CLIP) and what is said (Sentence-BERT)</li>
+        <li><b>Clips</b>each scene is cut out as an MP4 clip</li>
+        <li><b>Ranking</b>a model trained on the TVSum benchmark scores each clip, together with audio and dialogue cues</li>
+      </ol>
+      <p class="muted small" id="emptyHint">Videos up to <span id="maxDur">10</span> minutes. Your uploads are private to this browser and deleted automatically after a day.</p>
+    </section>
+
+    <section class="progress-view" id="progressView" hidden>
+      <h2 id="progressTitle"></h2>
+      <p class="muted" id="progressHint"></p>
+      <ol class="stage-list" id="stageList"></ol>
+      <pre class="log" id="log"></pre>
+    </section>
+
+    <section id="runView" hidden>
+      <header class="run-head">
+        <div>
+          <h2 id="runTitle"></h2>
+          <div class="stats" id="stats"></div>
+        </div>
+        <button class="ghost danger" id="deleteRun">Delete</button>
+      </header>
+
+      <div class="player-row">
+        <div class="player">
+          <video id="player" controls preload="metadata"></video>
+          <div class="now" id="nowPlaying"></div>
+        </div>
+        <div class="panel controls">
+          <h3>Highlight reel</h3>
+          <div class="summary-len" id="summaryLen"></div>
+          <div class="slider">
+            <label for="budget">Length <span id="budgetVal"></span></label>
+            <input type="range" id="budget" min="5" max="50" step="1">
+          </div>
+          <h4>Ranking weights</h4>
+          <div id="weights"></div>
+          <div class="btns">
+            <button id="playSummary">Play reel</button>
+            <button class="ghost" id="renderSummary">Export MP4</button>
+          </div>
+          <a id="summaryLink" class="dl" hidden download>Download reel</a>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <h3 class="section-title">Ranked clips <span id="sceneCount"></span></h3>
+        <div class="sort">
+          Order by <button class="chip active" data-sort="score">rank</button><button class="chip" data-sort="time">time</button>
+        </div>
+      </div>
+      <div class="cards" id="cards"></div>
+
+      <div class="panel">
+        <div class="tl-head">
+          <h3>Timeline</h3>
+          <div class="legend">
+            <span><i class="sw shot"></i>shots</span>
+            <span><i class="sw scene"></i>scenes (darker = higher rank)</span>
+            <span><i class="sw sel"></i>highlight reel</span>
+            <span><i class="sw curve"></i>visual importance</span>
+            <span><i class="sw speech"></i>speech</span>
+          </div>
+        </div>
+        <canvas id="timeline" height="200"></canvas>
+        <div class="tooltip" id="tooltip" hidden></div>
+      </div>
+
+      <details class="panel">
+        <summary>Pipeline details</summary>
+        <div class="details" id="details"></div>
+      </details>
+    </section>
+
+    <section class="how" id="howView" hidden>
+      <h2>Run ClipRanker on your own video</h2>
+      <p class="muted">The examples on this page were processed ahead of time. To process your own video,
+        run ClipRanker in one of these two ways. Both are free.</p>
+
+      <div class="panel how-card">
+        <h3>1. In your browser, with a free Google GPU</h3>
+        <p>Open the notebook in Google Colab, choose <b>Runtime, Change runtime type, T4 GPU</b>, then
+          <b>Runtime, Run all</b>. After about three minutes of setup, the full ClipRanker app opens
+          inside Colab and you can upload any video.</p>
+        <a class="btn" id="colabLink" target="_blank" rel="noopener">Open in Colab</a>
+      </div>
+
+      <div class="panel how-card">
+        <h3>2. On your own computer</h3>
+        <p>Needs Python 3.10 or newer. An NVIDIA GPU makes it about ten times faster.</p>
+<pre class="code">git clone <span id="repoUrl"></span>
+cd Semantic-Video-Synthesis-with-BERT
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+pip install -r requirements.txt
+python scripts/download_weights.py
+python -m app.server</pre>
+        <p>Then open <code>http://127.0.0.1:8000</code> and upload a video.</p>
+        <a class="btn ghost-btn" id="repoLink" target="_blank" rel="noopener">Source code on GitHub</a>
+      </div>
+    </section>
+
+    <section id="benchView" hidden>
+      <h2>How accurate is the ranking model?</h2>
+      <p class="muted" id="benchProtocol"></p>
+      <div class="panel"><table class="bench" id="benchTable"></table></div>
+      <div class="panel">
+        <div class="tl-head">
+          <h3>Model vs. human annotators on a video it never saw</h3>
+          <select id="benchVideo"></select>
+        </div>
+        <canvas id="benchChart" height="220"></canvas>
+        <div class="legend"><span><i class="sw gt"></i>average of 20 people</span><span><i class="sw curve"></i>model prediction</span></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="static/config.js"></script>
+  <script src="static/app.js"></script>
+</body>
+</html>

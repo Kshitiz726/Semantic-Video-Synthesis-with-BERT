@@ -1,0 +1,13 @@
+\begin{tabular}{lccc}
+\toprule
+Model & Kendall $\tau$ & Spearman $\rho$ & F1@15\% \\
+\midrule
+Human (inter-annotator) & 0.177 & 0.204 & 0.493 \\
+Random & 0.000 & 0.000 & 0.516 \\
+Segment MLP (original design) & 0.165 $\pm$ 0.004 & 0.207 $\pm$ 0.005 & 0.532 $\pm$ 0.002 \\
+Frame MLP & 0.194 $\pm$ 0.003 & 0.254 $\pm$ 0.004 & 0.556 $\pm$ 0.002 \\
+Transformer w/o position & 0.195 $\pm$ 0.004 & 0.255 $\pm$ 0.005 & 0.526 $\pm$ 0.003 \\
+Transformer (MSE only) & 0.188 $\pm$ 0.003 & 0.247 $\pm$ 0.005 & 0.529 $\pm$ 0.001 \\
+Transformer (ours) & 0.191 $\pm$ 0.003 & 0.250 $\pm$ 0.004 & 0.516 $\pm$ 0.002 \\
+\bottomrule
+\end{tabular}
