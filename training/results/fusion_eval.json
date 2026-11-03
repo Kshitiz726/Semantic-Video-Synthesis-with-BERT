@@ -1,0 +1,1792 @@
+{
+ "protocol": "Frame-level rank correlation with each of the 20 annotators, averaged. Visual = out-of-fold predictions. Fusion weights fixed in advance.",
+ "videos_with_speech": 46,
+ "rows": [
+  {
+   "config": "Visual only",
+   "n_videos": 50,
+   "kendall": 0.18700879158799405,
+   "spearman": 0.24435279109146849,
+   "per_video": [
+    {
+     "video": "-esJrBWj2d8",
+     "kendall": 0.1723102214583336,
+     "spearman": 0.23342647822722373
+    },
+    {
+     "video": "0tmA_C6XwfM",
+     "kendall": 0.23339536135386382,
+     "spearman": 0.30434697389174736
+    },
+    {
+     "video": "37rzWOQsNIw",
+     "kendall": -0.001450016340327312,
+     "spearman": -0.002684514075675895
+    },
+    {
+     "video": "3eYKfiOEJNs",
+     "kendall": 0.2783552145022543,
+     "spearman": 0.36780079521720715
+    },
+    {
+     "video": "4wU_LUjG5Ic",
+     "kendall": 0.2144475159200597,
+     "spearman": 0.28228714866630333
+    },
+    {
+     "video": "91IHQYk1IQM",
+     "kendall": 0.13486474531881168,
+     "spearman": 0.17753187493701544
+    },
+    {
+     "video": "98MoyGZKHXc",
+     "kendall": 0.3718502358202735,
+     "spearman": 0.48326568122135016
+    },
+    {
+     "video": "AwmHb44_ouw",
+     "kendall": 0.23045622563003804,
+     "spearman": 0.3054549975847293
+    },
+    {
+     "video": "Bhxk-O1Y7Ho",
+     "kendall": 0.34979806031522315,
+     "spearman": 0.4569067218277336
+    },
+    {
+     "video": "E11zDS9XGzg",
+     "kendall": 0.15443408082592847,
+     "spearman": 0.1981221467646575
+    },
+    {
+     "video": "EE-bNr36nyA",
+     "kendall": 0.1303116611427214,
+     "spearman": 0.17038199073976432
+    },
+    {
+     "video": "EYqVtI9YWJA",
+     "kendall": 0.30567309010488763,
+     "spearman": 0.4028423871294521
+    },
+    {
+     "video": "GsAD1KT1xo8",
+     "kendall": 0.0504686121636135,
+     "spearman": 0.0655139154662562
+    },
+    {
+     "video": "HT5vyqe0Xaw",
+     "kendall": 0.054819160998169414,
+     "spearman": 0.07169370731767069
+    },
+    {
+     "video": "Hl-__g2gn_A",
+     "kendall": 0.28559109965333385,
+     "spearman": 0.37520065555927684
+    },
+    {
+     "video": "J0nA4VgnoCo",
+     "kendall": 0.3055873647291657,
+     "spearman": 0.39327182203916594
+    },
+    {
+     "video": "JKpqYvAdIsw",
+     "kendall": -0.01689535921070131,
+     "spearman": -0.02005520608021031
+    },
+    {
+     "video": "JgHubY5Vw3Y",
+     "kendall": 0.32698617511452216,
+     "spearman": 0.4142286361950796
+    },
+    {
+     "video": "LRw_obCPUt0",
+     "kendall": 0.338436811901186,
+     "spearman": 0.44116462249658006
+    },
+    {
+     "video": "NyBmCxDoHJU",
+     "kendall": 0.14465433385448953,
+     "spearman": 0.19023253554975522
+    },
+    {
+     "video": "PJrm840pAUI",
+     "kendall": 0.06611833155562369,
+     "spearman": 0.08580764634209687
+    },
+    {
+     "video": "RBCABdttQmI",
+     "kendall": 0.1586517757294923,
+     "spearman": 0.21222701105966837
+    },
+    {
+     "video": "Se3oxnaPsz0",
+     "kendall": 0.31576025804173435,
+     "spearman": 0.41068555526894934
+    },
+    {
+     "video": "VuWGsYPqAX8",
+     "kendall": 0.0311667505140913,
+     "spearman": 0.04106880358088998
+    },
+    {
+     "video": "WG0MBPpPC6I",
+     "kendall": 0.2105225561538196,
+     "spearman": 0.2760024495396648
+    },
+    {
+     "video": "WxtbjNsCQ8A",
+     "kendall": 0.22311853790317637,
+     "spearman": 0.2949577139160825
+    },
+    {
+     "video": "XkqCExn6_Us",
+     "kendall": 0.1405175126997315,
+     "spearman": 0.18338040212723075
+    },
+    {
+     "video": "XzYM3PfTM4w",
+     "kendall": 0.07630390356962462,
+     "spearman": 0.10128532681865152
+    },
+    {
+     "video": "Yi4Ij2NM7U4",
+     "kendall": 0.3115450581269976,
+     "spearman": 0.40720034257522836
+    },
+    {
+     "video": "_xMr-HKMfVA",
+     "kendall": 0.11198070932599602,
+     "spearman": 0.1507964405452796
+    },
+    {
+     "video": "akI8YFjEmUw",
+     "kendall": 0.11022488127881573,
+     "spearman": 0.13916431706349627
+    },
+    {
+     "video": "b626MiF1ew4",
+     "kendall": 0.10995688978004799,
+     "spearman": 0.14743750550826534
+    },
+    {
+     "video": "byxOvuiIJV0",
+     "kendall": 0.08025669706039407,
+     "spearman": 0.10619020015982183
+    },
+    {
+     "video": "cjibtmSLxQ4",
+     "kendall": 0.17200957190800514,
+     "spearman": 0.22506559652270455
+    },
+    {
+     "video": "eQu1rNs0an0",
+     "kendall": 0.305881947366582,
+     "spearman": 0.3888723073477095
+    },
+    {
+     "video": "fWutDQy1nnY",
+     "kendall": 0.34048134949558617,
+     "spearman": 0.4458694214679809
+    },
+    {
+     "video": "gzDbaEs1Rlg",
+     "kendall": 0.2473237772554889,
+     "spearman": 0.32160015705507
+    },
+    {
+     "video": "i3wAGJaaktw",
+     "kendall": 0.29412487071518517,
+     "spearman": 0.38302555959395096
+    },
+    {
+     "video": "iVt07TCkFM0",
+     "kendall": 0.3003133560721525,
+     "spearman": 0.3922668135067386
+    },
+    {
+     "video": "jcoYJXDG9sw",
+     "kendall": 0.07689127764031378,
+     "spearman": 0.10090196186530664
+    },
+    {
+     "video": "kLxoNp-UchI",
+     "kendall": 0.0765555178851564,
+     "spearman": 0.10531099766663869
+    },
+    {
+     "video": "oDXZc0tZe04",
+     "kendall": 0.09556505651159457,
+     "spearman": 0.12530636407141177
+    },
+    {
+     "video": "qqR6AEXwxoQ",
+     "kendall": 0.21662712091676656,
+     "spearman": 0.2753921679701671
+    },
+    {
+     "video": "sTEELN-vY30",
+     "kendall": 0.222923779689214,
+     "spearman": 0.29313222898751506
+    },
+    {
+     "video": "uGu_10sucQo",
+     "kendall": 0.28360443130286805,
+     "spearman": 0.3689278917797175
+    },
+    {
+     "video": "vdmoEJ5YbrQ",
+     "kendall": 0.017525068592170335,
+     "spearman": 0.02228677242843414
+    },
+    {
+     "video": "xmEERLqJ2kU",
+     "kendall": 0.32417697575380605,
+     "spearman": 0.428956435185619
+    },
+    {
+     "video": "xwqBXPGE9pQ",
+     "kendall": 0.29696668466145437,
+     "spearman": 0.38904219096160014
+    },
+    {
+     "video": "xxdtq8mxegs",
+     "kendall": 0.24546141720326378,
+     "spearman": 0.3173822019134469
+    },
+    {
+     "video": "z_6gVvQb2d0",
+     "kendall": -0.1762110805652965,
+     "spearman": -0.2328365989309941
+    }
+   ]
+  },
+  {
+   "config": "Audio only",
+   "n_videos": 50,
+   "kendall": 0.014651894534626257,
+   "spearman": 0.019322194108723916,
+   "per_video": [
+    {
+     "video": "-esJrBWj2d8",
+     "kendall": 0.042128438538865845,
+     "spearman": 0.05568562895149538
+    },
+    {
+     "video": "0tmA_C6XwfM",
+     "kendall": 0.062049948203743654,
+     "spearman": 0.08182269160516839
+    },
+    {
+     "video": "37rzWOQsNIw",
+     "kendall": 0.04502436181375401,
+     "spearman": 0.05914044810355511
+    },
+    {
+     "video": "3eYKfiOEJNs",
+     "kendall": -0.06511218161455765,
+     "spearman": -0.08395393563766813
+    },
+    {
+     "video": "4wU_LUjG5Ic",
+     "kendall": 0.06169036570083193,
+     "spearman": 0.08207994794465309
+    },
+    {
+     "video": "91IHQYk1IQM",
+     "kendall": 0.14801864679528892,
+     "spearman": 0.19477908391195758
+    },
+    {
+     "video": "98MoyGZKHXc",
+     "kendall": -0.014392988501538423,
+     "spearman": -0.017927554726027445
+    },
+    {
+     "video": "AwmHb44_ouw",
+     "kendall": 0.05940398928975739,
+     "spearman": 0.0785441765688143
+    },
+    {
+     "video": "Bhxk-O1Y7Ho",
+     "kendall": 0.0026859427408954134,
+     "spearman": 0.0037283687794637367
+    },
+    {
+     "video": "E11zDS9XGzg",
+     "kendall": -0.04161146893924102,
+     "spearman": -0.05433063051447575
+    },
+    {
+     "video": "EE-bNr36nyA",
+     "kendall": 0.017920965182439803,
+     "spearman": 0.02431806885648135
+    },
+    {
+     "video": "EYqVtI9YWJA",
+     "kendall": 0.004196419581639839,
+     "spearman": 0.005782252187488337
+    },
+    {
+     "video": "GsAD1KT1xo8",
+     "kendall": -0.03587797132372499,
+     "spearman": -0.04780724438975888
+    },
+    {
+     "video": "HT5vyqe0Xaw",
+     "kendall": -0.0072252516191186195,
+     "spearman": -0.009645911379993863
+    },
+    {
+     "video": "Hl-__g2gn_A",
+     "kendall": -0.06390605501443047,
+     "spearman": -0.08409270057586538
+    },
+    {
+     "video": "J0nA4VgnoCo",
+     "kendall": -0.06915531033959929,
+     "spearman": -0.09122418867974041
+    },
+    {
+     "video": "JKpqYvAdIsw",
+     "kendall": 0.019529939005445134,
+     "spearman": 0.026869950885843985
+    },
+    {
+     "video": "JgHubY5Vw3Y",
+     "kendall": 0.010562639777666829,
+     "spearman": 0.014674675318574883
+    },
+    {
+     "video": "LRw_obCPUt0",
+     "kendall": -0.0031271520662890955,
+     "spearman": -0.004356030113418924
+    },
+    {
+     "video": "NyBmCxDoHJU",
+     "kendall": -0.0736036397510606,
+     "spearman": -0.09857000154244258
+    },
+    {
+     "video": "PJrm840pAUI",
+     "kendall": -0.0001904015075019201,
+     "spearman": 0.00037355253456751865
+    },
+    {
+     "video": "RBCABdttQmI",
+     "kendall": 0.013323919882362442,
+     "spearman": 0.018207993055229185
+    },
+    {
+     "video": "Se3oxnaPsz0",
+     "kendall": 0.09904315369759192,
+     "spearman": 0.1325812476831088
+    },
+    {
+     "video": "VuWGsYPqAX8",
+     "kendall": -0.017307760186888878,
+     "spearman": -0.02274484614441024
+    },
+    {
+     "video": "WG0MBPpPC6I",
+     "kendall": -0.1056782083962993,
+     "spearman": -0.13878711737140664
+    },
+    {
+     "video": "WxtbjNsCQ8A",
+     "kendall": -0.031836895843653124,
+     "spearman": -0.042814578366127454
+    },
+    {
+     "video": "XkqCExn6_Us",
+     "kendall": 0.12437666145592963,
+     "spearman": 0.164258806580943
+    },
+    {
+     "video": "XzYM3PfTM4w",
+     "kendall": 0.010707318662414799,
+     "spearman": 0.014119903063411782
+    },
+    {
+     "video": "Yi4Ij2NM7U4",
+     "kendall": -0.07363652990809165,
+     "spearman": -0.09754262452133076
+    },
+    {
+     "video": "_xMr-HKMfVA",
+     "kendall": 0.054303476677111454,
+     "spearman": 0.06688714239854905
+    },
+    {
+     "video": "akI8YFjEmUw",
+     "kendall": -0.013495979092049406,
+     "spearman": -0.018226933710538247
+    },
+    {
+     "video": "b626MiF1ew4",
+     "kendall": -0.05941704352644626,
+     "spearman": -0.07973725820637272
+    },
+    {
+     "video": "byxOvuiIJV0",
+     "kendall": 0.06648288243852785,
+     "spearman": 0.08678318265643672
+    },
+    {
+     "video": "cjibtmSLxQ4",
+     "kendall": -0.030831190645384237,
+     "spearman": -0.04071028909951317
+    },
+    {
+     "video": "eQu1rNs0an0",
+     "kendall": 0.046308151820358454,
+     "spearman": 0.05985106507925442
+    },
+    {
+     "video": "fWutDQy1nnY",
+     "kendall": -0.02845391221088194,
+     "spearman": -0.03936010846230428
+    },
+    {
+     "video": "gzDbaEs1Rlg",
+     "kendall": -0.0669725742058003,
+     "spearman": -0.08852423277054436
+    },
+    {
+     "video": "i3wAGJaaktw",
+     "kendall": 0.05469924079277172,
+     "spearman": 0.07107883067582202
+    },
+    {
+     "video": "iVt07TCkFM0",
+     "kendall": 0.039082179806236995,
+     "spearman": 0.0543728135212281
+    },
+    {
+     "video": "jcoYJXDG9sw",
+     "kendall": -0.0037952712758819356,
+     "spearman": -0.004795108128661794
+    },
+    {
+     "video": "kLxoNp-UchI",
+     "kendall": 0.026655055916891705,
+     "spearman": 0.034291565689670345
+    },
+    {
+     "video": "oDXZc0tZe04",
+     "kendall": 0.031654376837489576,
+     "spearman": 0.04293273811646275
+    },
+    {
+     "video": "qqR6AEXwxoQ",
+     "kendall": 0.0685548194729719,
+     "spearman": 0.08966955897856248
+    },
+    {
+     "video": "sTEELN-vY30",
+     "kendall": 0.03662068439652981,
+     "spearman": 0.047481973721449786
+    },
+    {
+     "video": "uGu_10sucQo",
+     "kendall": 0.0735758861970992,
+     "spearman": 0.0974117177556306
+    },
+    {
+     "video": "vdmoEJ5YbrQ",
+     "kendall": -0.06640313185329319,
+     "spearman": -0.08635665230576348
+    },
+    {
+     "video": "xmEERLqJ2kU",
+     "kendall": 0.1446729139068712,
+     "spearman": 0.19179236057546092
+    },
+    {
+     "video": "xwqBXPGE9pQ",
+     "kendall": 0.018259337471315425,
+     "spearman": 0.024673639055249236
+    },
+    {
+     "video": "xxdtq8mxegs",
+     "kendall": 0.03911602837315229,
+     "spearman": 0.05081089014346375
+    },
+    {
+     "video": "z_6gVvQb2d0",
+     "kendall": 0.18397790011708998,
+     "spearman": 0.24261337768456367
+    }
+   ]
+  },
+  {
+   "config": "Dialogue only",
+   "n_videos": 46,
+   "kendall": -0.0006909924340374971,
+   "spearman": 0.00147012797737912,
+   "per_video": [
+    {
+     "video": "-esJrBWj2d8",
+     "kendall": 0.11844543365807536,
+     "spearman": 0.146202859379786
+    },
+    {
+     "video": "0tmA_C6XwfM",
+     "kendall": 0.07850402925166815,
+     "spearman": 0.10263318327139877
+    },
+    {
+     "video": "37rzWOQsNIw",
+     "kendall": 0.0800051219153814,
+     "spearman": 0.10219426484812151
+    },
+    {
+     "video": "3eYKfiOEJNs",
+     "kendall": 0.024642002173072712,
+     "spearman": 0.03172306240396964
+    },
+    {
+     "video": "4wU_LUjG5Ic",
+     "kendall": -0.06034858184875662,
+     "spearman": -0.07452348542816305
+    },
+    {
+     "video": "98MoyGZKHXc",
+     "kendall": 0.20687954670599545,
+     "spearman": 0.2700708832981663
+    },
+    {
+     "video": "AwmHb44_ouw",
+     "kendall": 0.03682678031840541,
+     "spearman": 0.04745311382167555
+    },
+    {
+     "video": "Bhxk-O1Y7Ho",
+     "kendall": 0.07793363534644161,
+     "spearman": 0.10179580861055951
+    },
+    {
+     "video": "E11zDS9XGzg",
+     "kendall": -0.049095431622328614,
+     "spearman": -0.06480182782675947
+    },
+    {
+     "video": "EE-bNr36nyA",
+     "kendall": -0.10254564959444734,
+     "spearman": -0.1310299528181492
+    },
+    {
+     "video": "EYqVtI9YWJA",
+     "kendall": 0.00025686400136489126,
+     "spearman": 0.0004391076705909623
+    },
+    {
+     "video": "GsAD1KT1xo8",
+     "kendall": -0.1304086229270376,
+     "spearman": -0.16070121300694123
+    },
+    {
+     "video": "HT5vyqe0Xaw",
+     "kendall": -0.04995082133396343,
+     "spearman": -0.06395290718239163
+    },
+    {
+     "video": "Hl-__g2gn_A",
+     "kendall": -0.05497388438704672,
+     "spearman": -0.07076141132544189
+    },
+    {
+     "video": "J0nA4VgnoCo",
+     "kendall": 0.07135495818611139,
+     "spearman": 0.09042081682918807
+    },
+    {
+     "video": "JKpqYvAdIsw",
+     "kendall": -0.02728304693277526,
+     "spearman": -0.030888396142922003
+    },
+    {
+     "video": "JgHubY5Vw3Y",
+     "kendall": 0.10402906333531096,
+     "spearman": 0.1300771330066141
+    },
+    {
+     "video": "LRw_obCPUt0",
+     "kendall": 0.030680990887703548,
+     "spearman": 0.04209192619477475
+    },
+    {
+     "video": "NyBmCxDoHJU",
+     "kendall": 0.019406808574659252,
+     "spearman": 0.02359361346983719
+    },
+    {
+     "video": "PJrm840pAUI",
+     "kendall": -0.017952597519218537,
+     "spearman": -0.02266851482342025
+    },
+    {
+     "video": "RBCABdttQmI",
+     "kendall": 6.267570488138647e-05,
+     "spearman": -0.0005144476764437335
+    },
+    {
+     "video": "Se3oxnaPsz0",
+     "kendall": -0.015897497149414942,
+     "spearman": -0.018413382297437615
+    },
+    {
+     "video": "VuWGsYPqAX8",
+     "kendall": -0.04071623360351912,
+     "spearman": -0.04389092342579722
+    },
+    {
+     "video": "WG0MBPpPC6I",
+     "kendall": -0.015745739646829043,
+     "spearman": -0.020455624743239312
+    },
+    {
+     "video": "WxtbjNsCQ8A",
+     "kendall": -0.0183797897274434,
+     "spearman": -0.022913055704223716
+    },
+    {
+     "video": "XzYM3PfTM4w",
+     "kendall": 0.028571553772105452,
+     "spearman": 0.03493875798699956
+    },
+    {
+     "video": "Yi4Ij2NM7U4",
+     "kendall": 0.07488957011847797,
+     "spearman": 0.09934436006317944
+    },
+    {
+     "video": "_xMr-HKMfVA",
+     "kendall": -0.2056212040983012,
+     "spearman": -0.22337900623782345
+    },
+    {
+     "video": "akI8YFjEmUw",
+     "kendall": -0.03419209634653973,
+     "spearman": -0.0446608228823757
+    },
+    {
+     "video": "b626MiF1ew4",
+     "kendall": -0.03622420271490109,
+     "spearman": -0.045930416981808234
+    },
+    {
+     "video": "byxOvuiIJV0",
+     "kendall": 0.008709195597459663,
+     "spearman": 0.008934647517204852
+    },
+    {
+     "video": "cjibtmSLxQ4",
+     "kendall": -0.10875630966369991,
+     "spearman": -0.13717990868065583
+    },
+    {
+     "video": "eQu1rNs0an0",
+     "kendall": 0.04015091272120197,
+     "spearman": 0.04933945094608124
+    },
+    {
+     "video": "fWutDQy1nnY",
+     "kendall": -0.22683381980899348,
+     "spearman": -0.2652939744510129
+    },
+    {
+     "video": "gzDbaEs1Rlg",
+     "kendall": 0.08783268422676989,
+     "spearman": 0.11226993480363368
+    },
+    {
+     "video": "i3wAGJaaktw",
+     "kendall": 0.05398102085462275,
+     "spearman": 0.06944832220930165
+    },
+    {
+     "video": "iVt07TCkFM0",
+     "kendall": 0.08971556788678395,
+     "spearman": 0.11403165409540557
+    },
+    {
+     "video": "jcoYJXDG9sw",
+     "kendall": 0.049381268031074975,
+     "spearman": 0.06183126594818593
+    },
+    {
+     "video": "kLxoNp-UchI",
+     "kendall": -0.02982238508314103,
+     "spearman": -0.03632103363350085
+    },
+    {
+     "video": "qqR6AEXwxoQ",
+     "kendall": -0.09261251909490913,
+     "spearman": -0.12095355166193542
+    },
+    {
+     "video": "sTEELN-vY30",
+     "kendall": 0.06560778270126491,
+     "spearman": 0.0862759832650054
+    },
+    {
+     "video": "vdmoEJ5YbrQ",
+     "kendall": -0.023332370639275932,
+     "spearman": -0.028447144475164176
+    },
+    {
+     "video": "xmEERLqJ2kU",
+     "kendall": -0.2361714306928992,
+     "spearman": -0.28549461328855374
+    },
+    {
+     "video": "xwqBXPGE9pQ",
+     "kendall": 0.006586343598344141,
+     "spearman": 0.009048769563876879
+    },
+    {
+     "video": "xxdtq8mxegs",
+     "kendall": 0.22443047016676748,
+     "spearman": 0.2891157208841717
+    },
+    {
+     "video": "z_6gVvQb2d0",
+     "kendall": -0.033805697264228225,
+     "spearman": -0.042473138434128206
+    }
+   ]
+  },
+  {
+   "config": "Visual + audio (0.8 / 0.2)",
+   "n_videos": 50,
+   "kendall": 0.1863674441854435,
+   "spearman": 0.24340752338078858,
+   "per_video": [
+    {
+     "video": "-esJrBWj2d8",
+     "kendall": 0.1704393694250031,
+     "spearman": 0.23054967429939338
+    },
+    {
+     "video": "0tmA_C6XwfM",
+     "kendall": 0.23766080763425954,
+     "spearman": 0.3107439671013149
+    },
+    {
+     "video": "37rzWOQsNIw",
+     "kendall": 0.008328259685402538,
+     "spearman": 0.009724410318965532
+    },
+    {
+     "video": "3eYKfiOEJNs",
+     "kendall": 0.27727605414661916,
+     "spearman": 0.366046028183944
+    },
+    {
+     "video": "4wU_LUjG5Ic",
+     "kendall": 0.21663807218718337,
+     "spearman": 0.28566629517632136
+    },
+    {
+     "video": "91IHQYk1IQM",
+     "kendall": 0.14202109438293867,
+     "spearman": 0.1865192371851922
+    },
+    {
+     "video": "98MoyGZKHXc",
+     "kendall": 0.3705024712347645,
+     "spearman": 0.4821996417355875
+    },
+    {
+     "video": "AwmHb44_ouw",
+     "kendall": 0.22853223683790197,
+     "spearman": 0.3028314790478093
+    },
+    {
+     "video": "Bhxk-O1Y7Ho",
+     "kendall": 0.3485988648445483,
+     "spearman": 0.4548393280067177
+    },
+    {
+     "video": "E11zDS9XGzg",
+     "kendall": 0.13737182872543124,
+     "spearman": 0.17583816423525436
+    },
+    {
+     "video": "EE-bNr36nyA",
+     "kendall": 0.13054046418466206,
+     "spearman": 0.16889150155389923
+    },
+    {
+     "video": "EYqVtI9YWJA",
+     "kendall": 0.30787999253883125,
+     "spearman": 0.4050153192332102
+    },
+    {
+     "video": "GsAD1KT1xo8",
+     "kendall": 0.04359273176551255,
+     "spearman": 0.056027421077975835
+    },
+    {
+     "video": "HT5vyqe0Xaw",
+     "kendall": 0.05100272748349911,
+     "spearman": 0.066445322546975
+    },
+    {
+     "video": "Hl-__g2gn_A",
+     "kendall": 0.2848928968826731,
+     "spearman": 0.3743116636947254
+    },
+    {
+     "video": "J0nA4VgnoCo",
+     "kendall": 0.3016428864053947,
+     "spearman": 0.3885085296952206
+    },
+    {
+     "video": "JKpqYvAdIsw",
+     "kendall": -0.01433146387584103,
+     "spearman": -0.016456113443732472
+    },
+    {
+     "video": "JgHubY5Vw3Y",
+     "kendall": 0.3281085730172807,
+     "spearman": 0.41534258774825544
+    },
+    {
+     "video": "LRw_obCPUt0",
+     "kendall": 0.3387614322019126,
+     "spearman": 0.44130635358943116
+    },
+    {
+     "video": "NyBmCxDoHJU",
+     "kendall": 0.14242774405652397,
+     "spearman": 0.18675372875223634
+    },
+    {
+     "video": "PJrm840pAUI",
+     "kendall": 0.07292360277976534,
+     "spearman": 0.09448327315798043
+    },
+    {
+     "video": "RBCABdttQmI",
+     "kendall": 0.16192092953628262,
+     "spearman": 0.21636221820926024
+    },
+    {
+     "video": "Se3oxnaPsz0",
+     "kendall": 0.3158947425055555,
+     "spearman": 0.4112242406683368
+    },
+    {
+     "video": "VuWGsYPqAX8",
+     "kendall": 0.028552380804450543,
+     "spearman": 0.037354195474966975
+    },
+    {
+     "video": "WG0MBPpPC6I",
+     "kendall": 0.2037510936356123,
+     "spearman": 0.26721029277380387
+    },
+    {
+     "video": "WxtbjNsCQ8A",
+     "kendall": 0.22188524619673727,
+     "spearman": 0.2924965168696582
+    },
+    {
+     "video": "XkqCExn6_Us",
+     "kendall": 0.1678444093031709,
+     "spearman": 0.21862252082341724
+    },
+    {
+     "video": "XzYM3PfTM4w",
+     "kendall": 0.07390050704231539,
+     "spearman": 0.09769885948148313
+    },
+    {
+     "video": "Yi4Ij2NM7U4",
+     "kendall": 0.3064926299771211,
+     "spearman": 0.40051683413270744
+    },
+    {
+     "video": "_xMr-HKMfVA",
+     "kendall": 0.11286900404655882,
+     "spearman": 0.15213447892798143
+    },
+    {
+     "video": "akI8YFjEmUw",
+     "kendall": 0.10512517629630276,
+     "spearman": 0.13368814174383964
+    },
+    {
+     "video": "b626MiF1ew4",
+     "kendall": 0.10072267210749604,
+     "spearman": 0.13514618655363864
+    },
+    {
+     "video": "byxOvuiIJV0",
+     "kendall": 0.0891473360973746,
+     "spearman": 0.11737428963769773
+    },
+    {
+     "video": "cjibtmSLxQ4",
+     "kendall": 0.16894762632488264,
+     "spearman": 0.22043651266609246
+    },
+    {
+     "video": "eQu1rNs0an0",
+     "kendall": 0.3044015725140989,
+     "spearman": 0.38782419435578896
+    },
+    {
+     "video": "fWutDQy1nnY",
+     "kendall": 0.33931343310262724,
+     "spearman": 0.4445658539517474
+    },
+    {
+     "video": "gzDbaEs1Rlg",
+     "kendall": 0.2371647990578063,
+     "spearman": 0.3092402508079636
+    },
+    {
+     "video": "i3wAGJaaktw",
+     "kendall": 0.30275211047378175,
+     "spearman": 0.3945283439204839
+    },
+    {
+     "video": "iVt07TCkFM0",
+     "kendall": 0.29882817772208864,
+     "spearman": 0.3894465956574112
+    },
+    {
+     "video": "jcoYJXDG9sw",
+     "kendall": 0.07694091302608236,
+     "spearman": 0.10086713530696564
+    },
+    {
+     "video": "kLxoNp-UchI",
+     "kendall": 0.07572964581895131,
+     "spearman": 0.10391938194683806
+    },
+    {
+     "video": "oDXZc0tZe04",
+     "kendall": 0.09336395208159112,
+     "spearman": 0.12253678741954484
+    },
+    {
+     "video": "qqR6AEXwxoQ",
+     "kendall": 0.21559511695902386,
+     "spearman": 0.2746429625711243
+    },
+    {
+     "video": "sTEELN-vY30",
+     "kendall": 0.22233716825614175,
+     "spearman": 0.29180883856806866
+    },
+    {
+     "video": "uGu_10sucQo",
+     "kendall": 0.28384743071200197,
+     "spearman": 0.3692411619292121
+    },
+    {
+     "video": "vdmoEJ5YbrQ",
+     "kendall": -0.004944467043448686,
+     "spearman": -0.007138933720677894
+    },
+    {
+     "video": "xmEERLqJ2kU",
+     "kendall": 0.33465098600984083,
+     "spearman": 0.4423206303156391
+    },
+    {
+     "video": "xwqBXPGE9pQ",
+     "kendall": 0.27903172130805587,
+     "spearman": 0.3658363733713666
+    },
+    {
+     "video": "xxdtq8mxegs",
+     "kendall": 0.24505997404626667,
+     "spearman": 0.31634684197997853
+    },
+    {
+     "video": "z_6gVvQb2d0",
+     "kendall": -0.16756472519086169,
+     "spearman": -0.2214633502015873
+    }
+   ]
+  },
+  {
+   "config": "Visual + dialogue (0.8 / 0.2)",
+   "n_videos": 50,
+   "kendall": 0.1784962060800596,
+   "spearman": 0.23334351272853507,
+   "per_video": [
+    {
+     "video": "-esJrBWj2d8",
+     "kendall": 0.18805687344074515,
+     "spearman": 0.25268876874359114
+    },
+    {
+     "video": "0tmA_C6XwfM",
+     "kendall": 0.23334537302126965,
+     "spearman": 0.30707616144740285
+    },
+    {
+     "video": "37rzWOQsNIw",
+     "kendall": 0.032414198676626024,
+     "spearman": 0.042127514124861695
+    },
+    {
+     "video": "3eYKfiOEJNs",
+     "kendall": 0.26489011370154486,
+     "spearman": 0.3509976600876377
+    },
+    {
+     "video": "4wU_LUjG5Ic",
+     "kendall": 0.19899742497609316,
+     "spearman": 0.2607375458581292
+    },
+    {
+     "video": "91IHQYk1IQM",
+     "kendall": 0.13486474531881168,
+     "spearman": 0.17753187493701544
+    },
+    {
+     "video": "98MoyGZKHXc",
+     "kendall": 0.38567017693121713,
+     "spearman": 0.49993838437940435
+    },
+    {
+     "video": "AwmHb44_ouw",
+     "kendall": 0.2216147098218245,
+     "spearman": 0.29350267346754505
+    },
+    {
+     "video": "Bhxk-O1Y7Ho",
+     "kendall": 0.34797023761457246,
+     "spearman": 0.4547893408881338
+    },
+    {
+     "video": "E11zDS9XGzg",
+     "kendall": 0.13242488371952815,
+     "spearman": 0.1695283754480977
+    },
+    {
+     "video": "EE-bNr36nyA",
+     "kendall": 0.09917566743345335,
+     "spearman": 0.12764003247528283
+    },
+    {
+     "video": "EYqVtI9YWJA",
+     "kendall": 0.30380222196897205,
+     "spearman": 0.4015912075249455
+    },
+    {
+     "video": "GsAD1KT1xo8",
+     "kendall": 0.005643519728950298,
+     "spearman": 0.008083241984201121
+    },
+    {
+     "video": "HT5vyqe0Xaw",
+     "kendall": 0.03248700705086653,
+     "spearman": 0.0426243152055535
+    },
+    {
+     "video": "Hl-__g2gn_A",
+     "kendall": 0.27012912961174396,
+     "spearman": 0.3553887396737458
+    },
+    {
+     "video": "J0nA4VgnoCo",
+     "kendall": 0.2993424861578274,
+     "spearman": 0.38568025869632794
+    },
+    {
+     "video": "JKpqYvAdIsw",
+     "kendall": -0.017975535158217978,
+     "spearman": -0.021951125759265205
+    },
+    {
+     "video": "JgHubY5Vw3Y",
+     "kendall": 0.3369009184337891,
+     "spearman": 0.42754347861032194
+    },
+    {
+     "video": "LRw_obCPUt0",
+     "kendall": 0.3275472717299006,
+     "spearman": 0.43076446129079987
+    },
+    {
+     "video": "NyBmCxDoHJU",
+     "kendall": 0.14350476947493443,
+     "spearman": 0.18752590239557754
+    },
+    {
+     "video": "PJrm840pAUI",
+     "kendall": 0.0473082753042627,
+     "spearman": 0.061508446380007256
+    },
+    {
+     "video": "RBCABdttQmI",
+     "kendall": 0.15738621694941302,
+     "spearman": 0.20986098858696134
+    },
+    {
+     "video": "Se3oxnaPsz0",
+     "kendall": 0.3018313499596593,
+     "spearman": 0.3949395212870395
+    },
+    {
+     "video": "VuWGsYPqAX8",
+     "kendall": 0.024073743680337316,
+     "spearman": 0.03160720728206118
+    },
+    {
+     "video": "WG0MBPpPC6I",
+     "kendall": 0.19889240552647472,
+     "spearman": 0.2604489033124463
+    },
+    {
+     "video": "WxtbjNsCQ8A",
+     "kendall": 0.2165138572409917,
+     "spearman": 0.28340037686139696
+    },
+    {
+     "video": "XkqCExn6_Us",
+     "kendall": 0.1405175126997315,
+     "spearman": 0.18338040212723075
+    },
+    {
+     "video": "XzYM3PfTM4w",
+     "kendall": 0.0841404424202733,
+     "spearman": 0.11100948892245543
+    },
+    {
+     "video": "Yi4Ij2NM7U4",
+     "kendall": 0.30936645536415097,
+     "spearman": 0.40432558717648825
+    },
+    {
+     "video": "_xMr-HKMfVA",
+     "kendall": 0.055165812354074306,
+     "spearman": 0.07535726803175863
+    },
+    {
+     "video": "akI8YFjEmUw",
+     "kendall": 0.10303961316049122,
+     "spearman": 0.1311367407411435
+    },
+    {
+     "video": "b626MiF1ew4",
+     "kendall": 0.0956536129981544,
+     "spearman": 0.12837566335193856
+    },
+    {
+     "video": "byxOvuiIJV0",
+     "kendall": 0.08105198455038429,
+     "spearman": 0.10697957574927748
+    },
+    {
+     "video": "cjibtmSLxQ4",
+     "kendall": 0.10395650521935837,
+     "spearman": 0.1356864488642482
+    },
+    {
+     "video": "eQu1rNs0an0",
+     "kendall": 0.27582878552940376,
+     "spearman": 0.3512209665864857
+    },
+    {
+     "video": "fWutDQy1nnY",
+     "kendall": 0.31826294476865147,
+     "spearman": 0.4184232344678519
+    },
+    {
+     "video": "gzDbaEs1Rlg",
+     "kendall": 0.23915589902633258,
+     "spearman": 0.31239087548473343
+    },
+    {
+     "video": "i3wAGJaaktw",
+     "kendall": 0.2900305009584751,
+     "spearman": 0.3777744250600911
+    },
+    {
+     "video": "iVt07TCkFM0",
+     "kendall": 0.3033905882149159,
+     "spearman": 0.3985923643729944
+    },
+    {
+     "video": "jcoYJXDG9sw",
+     "kendall": 0.08359925491068212,
+     "spearman": 0.1097989485325652
+    },
+    {
+     "video": "kLxoNp-UchI",
+     "kendall": 0.05085504649584401,
+     "spearman": 0.07301611042140678
+    },
+    {
+     "video": "oDXZc0tZe04",
+     "kendall": 0.09556505651159457,
+     "spearman": 0.12530636407141177
+    },
+    {
+     "video": "qqR6AEXwxoQ",
+     "kendall": 0.18900259615218348,
+     "spearman": 0.24182939370536066
+    },
+    {
+     "video": "sTEELN-vY30",
+     "kendall": 0.23987513885800657,
+     "spearman": 0.31411326398526207
+    },
+    {
+     "video": "uGu_10sucQo",
+     "kendall": 0.28360443130286805,
+     "spearman": 0.3689278917797175
+    },
+    {
+     "video": "vdmoEJ5YbrQ",
+     "kendall": 0.020401720350656665,
+     "spearman": 0.025913121118434957
+    },
+    {
+     "video": "xmEERLqJ2kU",
+     "kendall": 0.27242051045961074,
+     "spearman": 0.36008015600635307
+    },
+    {
+     "video": "xwqBXPGE9pQ",
+     "kendall": 0.2787060978000064,
+     "spearman": 0.3657627911671485
+    },
+    {
+     "video": "xxdtq8mxegs",
+     "kendall": 0.2870370978146496,
+     "spearman": 0.36838067926225976
+    },
+    {
+     "video": "z_6gVvQb2d0",
+     "kendall": -0.1626293462331123,
+     "spearman": -0.21618037974908472
+    }
+   ]
+  },
+  {
+   "config": "All three, app default (0.6 / 0.15 / 0.25)",
+   "n_videos": 50,
+   "kendall": 0.1681089840857711,
+   "spearman": 0.2197817192084293,
+   "per_video": [
+    {
+     "video": "-esJrBWj2d8",
+     "kendall": 0.18550482858887332,
+     "spearman": 0.24702506501802812
+    },
+    {
+     "video": "0tmA_C6XwfM",
+     "kendall": 0.2265664461263132,
+     "spearman": 0.2999627724027169
+    },
+    {
+     "video": "37rzWOQsNIw",
+     "kendall": 0.05038523435675557,
+     "spearman": 0.06579786728870574
+    },
+    {
+     "video": "3eYKfiOEJNs",
+     "kendall": 0.24755542016071574,
+     "spearman": 0.3282746637046347
+    },
+    {
+     "video": "4wU_LUjG5Ic",
+     "kendall": 0.17750434170589952,
+     "spearman": 0.23194242251590783
+    },
+    {
+     "video": "91IHQYk1IQM",
+     "kendall": 0.14202109438293867,
+     "spearman": 0.1865192371851922
+    },
+    {
+     "video": "98MoyGZKHXc",
+     "kendall": 0.38355359771117264,
+     "spearman": 0.49758784177464854
+    },
+    {
+     "video": "AwmHb44_ouw",
+     "kendall": 0.21067069038168768,
+     "spearman": 0.2790614498275628
+    },
+    {
+     "video": "Bhxk-O1Y7Ho",
+     "kendall": 0.3351843645863762,
+     "spearman": 0.4378245712562133
+    },
+    {
+     "video": "E11zDS9XGzg",
+     "kendall": 0.10116803094677093,
+     "spearman": 0.12929513742931475
+    },
+    {
+     "video": "EE-bNr36nyA",
+     "kendall": 0.0812511230547424,
+     "spearman": 0.1043765867300505
+    },
+    {
+     "video": "EYqVtI9YWJA",
+     "kendall": 0.29754273987146707,
+     "spearman": 0.39426238571804406
+    },
+    {
+     "video": "GsAD1KT1xo8",
+     "kendall": -0.02775124922714068,
+     "spearman": -0.03659321818220641
+    },
+    {
+     "video": "HT5vyqe0Xaw",
+     "kendall": 0.014092512146093314,
+     "spearman": 0.018394861384168217
+    },
+    {
+     "video": "Hl-__g2gn_A",
+     "kendall": 0.2503576165558116,
+     "spearman": 0.3291043110663967
+    },
+    {
+     "video": "J0nA4VgnoCo",
+     "kendall": 0.28061299034232723,
+     "spearman": 0.36256647333914527
+    },
+    {
+     "video": "JKpqYvAdIsw",
+     "kendall": -0.01776718090338126,
+     "spearman": -0.022578649990650707
+    },
+    {
+     "video": "JgHubY5Vw3Y",
+     "kendall": 0.3378850045994414,
+     "spearman": 0.42973851896774595
+    },
+    {
+     "video": "LRw_obCPUt0",
+     "kendall": 0.31824667421082886,
+     "spearman": 0.42025219411162495
+    },
+    {
+     "video": "NyBmCxDoHJU",
+     "kendall": 0.12795147569963677,
+     "spearman": 0.16710009122685096
+    },
+    {
+     "video": "PJrm840pAUI",
+     "kendall": 0.02973478465146683,
+     "spearman": 0.038287622321290425
+    },
+    {
+     "video": "RBCABdttQmI",
+     "kendall": 0.14927051534138272,
+     "spearman": 0.1987900484679067
+    },
+    {
+     "video": "Se3oxnaPsz0",
+     "kendall": 0.29132765390953386,
+     "spearman": 0.3833136438010033
+    },
+    {
+     "video": "VuWGsYPqAX8",
+     "kendall": 0.020762711046564724,
+     "spearman": 0.026960923219459206
+    },
+    {
+     "video": "WG0MBPpPC6I",
+     "kendall": 0.1757540771759726,
+     "spearman": 0.23017283399688981
+    },
+    {
+     "video": "WxtbjNsCQ8A",
+     "kendall": 0.20625990261349628,
+     "spearman": 0.26852871479020796
+    },
+    {
+     "video": "XkqCExn6_Us",
+     "kendall": 0.1678444093031709,
+     "spearman": 0.21862252082341724
+    },
+    {
+     "video": "XzYM3PfTM4w",
+     "kendall": 0.07655647762912354,
+     "spearman": 0.10008793916260694
+    },
+    {
+     "video": "Yi4Ij2NM7U4",
+     "kendall": 0.3019112302772917,
+     "spearman": 0.3947492568836448
+    },
+    {
+     "video": "_xMr-HKMfVA",
+     "kendall": 0.02869065351843856,
+     "spearman": 0.03822054125913461
+    },
+    {
+     "video": "akI8YFjEmUw",
+     "kendall": 0.09561824690353785,
+     "spearman": 0.12231135723924964
+    },
+    {
+     "video": "b626MiF1ew4",
+     "kendall": 0.0691412653601929,
+     "spearman": 0.09337753019605097
+    },
+    {
+     "video": "byxOvuiIJV0",
+     "kendall": 0.09007434772367863,
+     "spearman": 0.1184190090515325
+    },
+    {
+     "video": "cjibtmSLxQ4",
+     "kendall": 0.045818751249158164,
+     "spearman": 0.059648920045324696
+    },
+    {
+     "video": "eQu1rNs0an0",
+     "kendall": 0.26671779674238577,
+     "spearman": 0.3394568933485861
+    },
+    {
+     "video": "fWutDQy1nnY",
+     "kendall": 0.28532092342838294,
+     "spearman": 0.3776681432354513
+    },
+    {
+     "video": "gzDbaEs1Rlg",
+     "kendall": 0.2241339248259059,
+     "spearman": 0.2936893611837208
+    },
+    {
+     "video": "i3wAGJaaktw",
+     "kendall": 0.2892658857547358,
+     "spearman": 0.3779716272345751
+    },
+    {
+     "video": "iVt07TCkFM0",
+     "kendall": 0.2937445770805877,
+     "spearman": 0.38649151657767755
+    },
+    {
+     "video": "jcoYJXDG9sw",
+     "kendall": 0.08473224864916767,
+     "spearman": 0.11144651690135562
+    },
+    {
+     "video": "kLxoNp-UchI",
+     "kendall": 0.04235666554018193,
+     "spearman": 0.061290887366352596
+    },
+    {
+     "video": "oDXZc0tZe04",
+     "kendall": 0.09336395208159112,
+     "spearman": 0.12253678741954484
+    },
+    {
+     "video": "qqR6AEXwxoQ",
+     "kendall": 0.1626701974192712,
+     "spearman": 0.21039432585740675
+    },
+    {
+     "video": "sTEELN-vY30",
+     "kendall": 0.23950177512147613,
+     "spearman": 0.31310897771040985
+    },
+    {
+     "video": "uGu_10sucQo",
+     "kendall": 0.28384743071200197,
+     "spearman": 0.3692411619292121
+    },
+    {
+     "video": "vdmoEJ5YbrQ",
+     "kendall": -0.0009556877458281578,
+     "spearman": -0.0019966240231590964
+    },
+    {
+     "video": "xmEERLqJ2kU",
+     "kendall": 0.22968949316158205,
+     "spearman": 0.3024149234433443
+    },
+    {
+     "video": "xwqBXPGE9pQ",
+     "kendall": 0.27542280485129345,
+     "spearman": 0.3610708659520886
+    },
+    {
+     "video": "xxdtq8mxegs",
+     "kendall": 0.29575787692636635,
+     "spearman": 0.37789134468606783
+    },
+    {
+     "video": "z_6gVvQb2d0",
+     "kendall": -0.13142144226088753,
+     "spearman": -0.17499619243298087
+    }
+   ]
+  },
+  {
+   "config": "All three, equal",
+   "n_videos": 50,
+   "kendall": 0.12734305440072913,
+   "spearman": 0.16681567986376644,
+   "per_video": [
+    {
+     "video": "-esJrBWj2d8",
+     "kendall": 0.1605326853928805,
+     "spearman": 0.21099787705497866
+    },
+    {
+     "video": "0tmA_C6XwfM",
+     "kendall": 0.19178180116928667,
+     "spearman": 0.25456815074697337
+    },
+    {
+     "video": "37rzWOQsNIw",
+     "kendall": 0.0767144234987575,
+     "spearman": 0.10176250207791145
+    },
+    {
+     "video": "3eYKfiOEJNs",
+     "kendall": 0.18433755986918451,
+     "spearman": 0.2443887026360684
+    },
+    {
+     "video": "4wU_LUjG5Ic",
+     "kendall": 0.09938604142166876,
+     "spearman": 0.13123362242206918
+    },
+    {
+     "video": "91IHQYk1IQM",
+     "kendall": 0.15645115037996898,
+     "spearman": 0.2055558663992291
+    },
+    {
+     "video": "98MoyGZKHXc",
+     "kendall": 0.33734228461509386,
+     "spearman": 0.44216487912197194
+    },
+    {
+     "video": "AwmHb44_ouw",
+     "kendall": 0.17637591055484086,
+     "spearman": 0.23434707641253913
+    },
+    {
+     "video": "Bhxk-O1Y7Ho",
+     "kendall": 0.25586167903796414,
+     "spearman": 0.33599110246884323
+    },
+    {
+     "video": "E11zDS9XGzg",
+     "kendall": 0.04812476502169661,
+     "spearman": 0.06191685420089067
+    },
+    {
+     "video": "EE-bNr36nyA",
+     "kendall": 0.013551532574869926,
+     "spearman": 0.016554991546135118
+    },
+    {
+     "video": "EYqVtI9YWJA",
+     "kendall": 0.2727332387924782,
+     "spearman": 0.36198774839790177
+    },
+    {
+     "video": "GsAD1KT1xo8",
+     "kendall": -0.09311623973918758,
+     "spearman": -0.12505484207895545
+    },
+    {
+     "video": "HT5vyqe0Xaw",
+     "kendall": -0.01977986135709977,
+     "spearman": -0.026287593814599865
+    },
+    {
+     "video": "Hl-__g2gn_A",
+     "kendall": 0.15239036128100786,
+     "spearman": 0.200277452695402
+    },
+    {
+     "video": "J0nA4VgnoCo",
+     "kendall": 0.2056724536837719,
+     "spearman": 0.26708700970146027
+    },
+    {
+     "video": "JKpqYvAdIsw",
+     "kendall": -0.03181233977630809,
+     "spearman": -0.04215195478380919
+    },
+    {
+     "video": "JgHubY5Vw3Y",
+     "kendall": 0.3162794406907316,
+     "spearman": 0.4070779969739881
+    },
+    {
+     "video": "LRw_obCPUt0",
+     "kendall": 0.2746414023769585,
+     "spearman": 0.3637295348993341
+    },
+    {
+     "video": "NyBmCxDoHJU",
+     "kendall": 0.0883293087889675,
+     "spearman": 0.11669360317615902
+    },
+    {
+     "video": "PJrm840pAUI",
+     "kendall": -0.00020154935886559922,
+     "spearman": -0.0006767655704299116
+    },
+    {
+     "video": "RBCABdttQmI",
+     "kendall": 0.10089294503074937,
+     "spearman": 0.13437179582476194
+    },
+    {
+     "video": "Se3oxnaPsz0",
+     "kendall": 0.23569051897701657,
+     "spearman": 0.3138091927148977
+    },
+    {
+     "video": "VuWGsYPqAX8",
+     "kendall": 0.017250795491864528,
+     "spearman": 0.022417349066912277
+    },
+    {
+     "video": "WG0MBPpPC6I",
+     "kendall": 0.11419906768618049,
+     "spearman": 0.15040241407980906
+    },
+    {
+     "video": "WxtbjNsCQ8A",
+     "kendall": 0.1469824269256222,
+     "spearman": 0.18989726297839293
+    },
+    {
+     "video": "XkqCExn6_Us",
+     "kendall": 0.20081601950863645,
+     "spearman": 0.2622338084212293
+    },
+    {
+     "video": "XzYM3PfTM4w",
+     "kendall": 0.04683164921871087,
+     "spearman": 0.06085487713448547
+    },
+    {
+     "video": "Yi4Ij2NM7U4",
+     "kendall": 0.26755480702586715,
+     "spearman": 0.35212534411534396
+    },
+    {
+     "video": "_xMr-HKMfVA",
+     "kendall": 0.017387643418473035,
+     "spearman": 0.02304987859155245
+    },
+    {
+     "video": "akI8YFjEmUw",
+     "kendall": 0.07746364111173513,
+     "spearman": 0.09996680209215318
+    },
+    {
+     "video": "b626MiF1ew4",
+     "kendall": 0.0037634458756401513,
+     "spearman": 0.005530543618209196
+    },
+    {
+     "video": "byxOvuiIJV0",
+     "kendall": 0.08711417428784052,
+     "spearman": 0.11564492138608695
+    },
+    {
+     "video": "cjibtmSLxQ4",
+     "kendall": -0.023049591187246716,
+     "spearman": -0.03020292765016374
+    },
+    {
+     "video": "eQu1rNs0an0",
+     "kendall": 0.22806182210781004,
+     "spearman": 0.29026326145676973
+    },
+    {
+     "video": "fWutDQy1nnY",
+     "kendall": 0.059711091674846305,
+     "spearman": 0.07801826251712554
+    },
+    {
+     "video": "gzDbaEs1Rlg",
+     "kendall": 0.19303399521518264,
+     "spearman": 0.25335898471507023
+    },
+    {
+     "video": "i3wAGJaaktw",
+     "kendall": 0.2625434143186701,
+     "spearman": 0.3434048125943687
+    },
+    {
+     "video": "iVt07TCkFM0",
+     "kendall": 0.26213366754004214,
+     "spearman": 0.3456705589485286
+    },
+    {
+     "video": "jcoYJXDG9sw",
+     "kendall": 0.08582236157806836,
+     "spearman": 0.11454447851904785
+    },
+    {
+     "video": "kLxoNp-UchI",
+     "kendall": 0.016859506536044698,
+     "spearman": 0.02356940041237806
+    },
+    {
+     "video": "oDXZc0tZe04",
+     "kendall": 0.08742962461155053,
+     "spearman": 0.11630134783941685
+    },
+    {
+     "video": "qqR6AEXwxoQ",
+     "kendall": 0.06138967375375781,
+     "spearman": 0.07938533732451683
+    },
+    {
+     "video": "sTEELN-vY30",
+     "kendall": 0.22482191101018928,
+     "spearman": 0.2931677832530722
+    },
+    {
+     "video": "uGu_10sucQo",
+     "kendall": 0.2772282451502259,
+     "spearman": 0.36055600006571586
+    },
+    {
+     "video": "vdmoEJ5YbrQ",
+     "kendall": -0.02692574509976099,
+     "spearman": -0.03550930435849033
+    },
+    {
+     "video": "xmEERLqJ2kU",
+     "kendall": 0.024383456511531947,
+     "spearman": 0.03342031410800969
+    },
+    {
+     "video": "xwqBXPGE9pQ",
+     "kendall": 0.240070716740091,
+     "spearman": 0.3145045854295355
+    },
+    {
+     "video": "xxdtq8mxegs",
+     "kendall": 0.27935998353865993,
+     "spearman": 0.35781646289811175
+    },
+    {
+     "video": "z_6gVvQb2d0",
+     "kendall": -0.06726459744020913,
+     "spearman": -0.08995336959258628
+    }
+   ]
+  }
+ ]
+}

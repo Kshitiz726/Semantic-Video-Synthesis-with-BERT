@@ -107,3 +107,31 @@ python -m training.export_results --data data/tvsum_clip.h5 --tvsum_dir path/to/
 
 Raw numbers per video, fold and seed: `training/results/tvsum_cv_results.json`.
 Training curves: `training/results/logs/`. Figures: `docs/figures/`.
+
+## Sanity checks
+
+`python -m training.sanity_checks` verifies that the five test folds are disjoint, cover every
+video once, and never overlap with the training or early-stopping videos. It also repeats the
+whole training with each video's labels shuffled in time. That control scores τ = 0.020 and
+ρ = 0.027, essentially zero, so the real result (τ = 0.191) comes from the video content and not
+from the evaluation setup. Results: `training/results/sanity_checks.json`.
+
+## Do the audio and dialogue scores help?
+
+`python -m training.eval_fusion` combines the held-out visual predictions with the audio and
+dialogue scores on TVSum, with weights fixed in advance.
+
+| Configuration | Kendall τ | Spearman ρ |
+|---|---:|---:|
+| Visual only | 0.187 | 0.244 |
+| Audio only | 0.015 | 0.019 |
+| Dialogue only (46 videos with speech) | -0.001 | 0.001 |
+| Visual + audio (0.8 / 0.2) | 0.186 | 0.243 |
+| Visual + dialogue (0.8 / 0.2) | 0.178 | 0.233 |
+| All three, app default (0.6 / 0.15 / 0.25) | 0.168 | 0.220 |
+| All three, equal | 0.127 | 0.167 |
+
+On TVSum they do not help: audio and dialogue alone are close to random, and adding them lowers
+agreement with the annotators slightly. TVSum is mostly visual, user-recorded footage, so this
+does not settle whether they help on narration-heavy video, but it is the honest result on this
+benchmark. Results: `training/results/fusion_eval.json`.

@@ -1,0 +1,8 @@
+{
+ "leakage_check": "passed: 5 disjoint test folds covering all 50 videos once; no test video in training or early stopping",
+ "shuffled_label_control": {
+  "kendall": 0.02019552711702827,
+  "spearman": 0.026507305999392522,
+  "f1": 0.5096379046465693
+ }
+}
