@@ -1788,5 +1788,19 @@
     }
    ]
   }
- ]
+ ],
+ "modality_correlation": {
+  "visual-audio": {
+   "mean_spearman": 0.028062583145228276,
+   "n_videos": 50
+  },
+  "visual-text": {
+   "mean_spearman": 0.002066799875923907,
+   "n_videos": 46
+  },
+  "audio-text": {
+   "mean_spearman": 0.08389014469613358,
+   "n_videos": 46
+  }
+ }
 }

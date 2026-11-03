@@ -13,6 +13,7 @@ from pathlib import Path
 
 import h5py
 import numpy as np
+from scipy.stats import spearmanr
 
 from svs.config import FEATURE_FPS
 from training.metrics import rank_correlation, upsample
@@ -84,6 +85,7 @@ def main():
 
     h5 = h5py.File(args.data, "r")
     rows = {name: [] for name in CONFIGS}
+    pair_corr = {}
     speech_videos = 0
     for i, v in enumerate(sorted(h5)):
         g = h5[v]
@@ -94,6 +96,9 @@ def main():
             cache_path.write_text(json.dumps(cache, ensure_ascii=False), "utf-8")
         mods = {"visual": np.asarray(oof[v]), "audio": audio_steps(audio, T), "text": text_steps(cache[v], T)}
         speech_videos += mods["text"] is not None
+        for a, b in (("visual", "audio"), ("visual", "text"), ("audio", "text")):
+            if mods[a] is not None and mods[b] is not None:
+                pair_corr.setdefault(f"{a}-{b}", []).append(float(spearmanr(mods[a], mods[b])[0]))
         for name, w in CONFIGS.items():
             avail = {m: wt for m, wt in w.items() if mods[m] is not None}
             if not avail:
@@ -105,7 +110,9 @@ def main():
 
     result = {"protocol": "Frame-level rank correlation with each of the 20 annotators, averaged. Visual = "
                           "out-of-fold predictions. Fusion weights fixed in advance.",
-              "videos_with_speech": speech_videos, "rows": []}
+              "videos_with_speech": speech_videos, "rows": [],
+              "modality_correlation": {k: {"mean_spearman": float(np.mean(v)), "n_videos": len(v)}
+                                       for k, v in pair_corr.items()}}
     for name, r in rows.items():
         result["rows"].append({"config": name, "n_videos": len(r),
                                "kendall": float(np.mean([x["kendall"] for x in r])),
